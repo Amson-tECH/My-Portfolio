@@ -2,7 +2,6 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 import toast from "react-hot-toast"; // ✅ import toast
-import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa"; // Socials icons
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -84,34 +83,6 @@ const Contact = () => {
         {/* Optional: Keep this if you still want inline text feedback */}
         {/* <p className="mt-4 text-center text-gray-700">{result}</p> */}
       </form>
-
-      {/* 🌐 Social Media Icons */}
-      <div className="flex items-center justify-center gap-6 mt-10">
-        <a
-          href="https://www.linkedin.com/in/reuben-korsi-amuzu-b4bb82385"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
-        >
-          <FaLinkedinIn className="text-2xl text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors" />
-        </a>
-        <a
-          href="https://github.com/Amson-tECH"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
-        >
-          <FaGithub className="text-2xl text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors" />
-        </a>
-        <a
-          href="https://www.instagram.com/your-instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
-        >
-          <FaInstagram className="text-2xl text-gray-700 dark:text-gray-300 hover:text-pink-500 transition-colors" />
-        </a>
-      </div>
     </div>
   );
 };
