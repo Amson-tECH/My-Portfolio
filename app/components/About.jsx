@@ -18,13 +18,12 @@ const About = () => {
         </div>
         <div className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo">
-            {" "}
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam nihil
             nisi iste sint aspernatur deserunt pariatur vero. Neque omnis,
             labore saepe delectus, optio voluptate provident consequatur
             molestiae, expedita voluptatem facilis unde esse odit repudiandae
             incidunt deleniti laudantium! Nobis eligendi ullam, ab neque
-            praesentium illum minus delectus. Animi labore eum iste.{" "}
+            praesentium illum minus delectus. Animi labore eum iste.
           </p>
 
           <ul className="grid grid-cols-1 sm:grid-cols-3  gap-6 max-w-2xl">

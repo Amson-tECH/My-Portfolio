@@ -55,32 +55,27 @@ const Navbar = () => {
         >
           <li>
             <a className="font-Ovo" href="#top">
-              {" "}
               Home
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#about">
-              {" "}
-              About me{" "}
+              About me
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#services">
-              {" "}
-              Services{" "}
+              Services
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#work">
-              {" "}
-              My Work{" "}
+              My Work
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#contact">
-              {" "}
-              Contact me{" "}
+              Contact me
             </a>
           </li>
         </ul>
@@ -120,32 +115,27 @@ const Navbar = () => {
           </div>
           <li>
             <a className="font-Ovo" href="#top" onClick={closeMenu}>
-              {" "}
               Home
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#about" onClick={closeMenu}>
-              {" "}
-              About me{" "}
+              About me
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#services" onClick={closeMenu}>
-              {" "}
-              Services{" "}
+              Services
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#work" onClick={closeMenu}>
-              {" "}
-              My Work{" "}
+              My Work
             </a>
           </li>
           <li>
             <a className="font-Ovo" href="#contact" onClick={closeMenu}>
-              {" "}
-              Contact me{" "}
+              Contact me
             </a>
           </li>
         </ul>
