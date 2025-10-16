@@ -1,15 +1,17 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
+import toast from "react-hot-toast"; // ✅ import toast
 
 const Contact = () => {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    setResult("Sending...");
+    toast.loading("Sending message..."); // show loading toast
 
+    const formData = new FormData(event.target);
     formData.append("access_key", "a80f862b-c870-4fc6-ac8d-ba7b4bbc5e47");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -19,11 +21,15 @@ const Contact = () => {
 
     const data = await response.json();
 
+    toast.dismiss(); // remove loading toast
+
     if (data.success) {
+      toast.success("Message sent successfully! 🎉");
       setResult("Form Submitted Successfully");
       event.target.reset();
     } else {
       console.log("Error", data);
+      toast.error("Something went wrong 😢");
       setResult(data.message);
     }
   };
@@ -70,11 +76,12 @@ const Contact = () => {
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
           type="submit"
         >
-          Submit now{" "}
-          <Image src={assets.right_arrow_white} alt="" className="w-4" />{" "}
+          Submit now
+          <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </button>
 
-        <p className="mt-4">{result}</p>
+        {/* Optional: Keep this if you still want inline text feedback */}
+        {/* <p className="mt-4 text-center text-gray-700">{result}</p> */}
       </form>
     </div>
   );
