@@ -72,7 +72,7 @@ const About = ({ isDarkMode }) => {
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <motion.li
-                whileInView={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }}
                 key={index}
                 className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer  hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-gray-400 dark:hover:bg-darkHover/50"
               >
@@ -82,31 +82,41 @@ const About = ({ isDarkMode }) => {
                   className="w-7 mt-3"
                 />
                 <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
-                  {" "}
-                  {title}{" "}
+                  {title}
                 </h3>
                 <p className="text-gray-600 text-sm dark:text-white/80">
-                  {" "}
-                  {description}{" "}
+                  {description}
                 </p>
               </motion.li>
             ))}
           </motion.ul>
 
-          <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
+          <motion.h4
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.3, duration: 0.5 }}
+            className="my-6 text-gray-700 font-Ovo dark:text-white/80"
+          >
             Tools I use
-          </h4>
+          </motion.h4>
 
-          <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
+          <motion.ul
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{ delay: 1.5, duration: 0.6 }}
+          
+          className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
-              <li
+              <motion.li
+
+                whileHover={{scale: 1.1}}              
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-gray-400 dark:hover:bg-darkHover/50"
                 key={index}
               >
                 <Image src={tool} alt="" className="w-5 sm:w-7" />
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </motion.div>
       </motion.div>
     </motion.div>
