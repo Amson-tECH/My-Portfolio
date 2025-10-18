@@ -13,8 +13,11 @@ const ovo = OvoFont({
 });
 
 export const metadata = {
-  title: "Reuben - Portfolio",
+  title: "Reuben Korsi Amuzu | Portfolio",
   description: "",
+  icons: {
+    icon: "/favicon.ico", 
+  },
 };
 
 export default function RootLayout({ children }) {
