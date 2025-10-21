@@ -1,6 +1,8 @@
 import { Outfit as OutfitFont, Ovo as OvoFont } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from '@vercel/analytics/next';
+
 
 const outfit = OutfitFont({
   subsets: ["latin"],
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}>
         {children}
+          <Analytics />
          <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>
