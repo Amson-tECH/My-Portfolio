@@ -34,7 +34,7 @@ const Footer = ({isDarkMode}) => {
           <FaGithub className="text-2xl text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors" />
         </a>
         <a
-          href="https://www.instagram.com/your-instagram"
+          href="https://www.instagram.com/mrr_reuben?igsh=MW1zOWw1Mm5qbTJpdg%3D%3D&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"

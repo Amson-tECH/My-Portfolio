@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}>
         {children}
-          <Analytics />
          <Toaster position="top-right" reverseOrder={false} />
+        <Analytics />
       </body>
     </html>
   );
