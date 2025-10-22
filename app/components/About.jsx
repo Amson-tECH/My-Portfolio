@@ -56,12 +56,13 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam nihil
-            nisi iste sint aspernatur deserunt pariatur vero. Neque omnis,
-            labore saepe delectus, optio voluptate provident consequatur
-            molestiae, expedita voluptatem facilis unde esse odit repudiandae
-            incidunt deleniti laudantium! Nobis eligendi ullam, ab neque
-            praesentium illum minus delectus. Animi labore eum iste.
+            I am a creative and detail-driven Software
+            Developer with a passion for building seamless digital experiences.
+            I enjoy crafting intuitive user interfaces and powerful backend
+            systems that work beautifully together. I’m driven by curiosity,
+            always exploring new technologies, and constantly pushing myself to
+            write cleaner, smarter, and more scalable code that brings ideas to
+            life.
           </p>
 
           <motion.ul
@@ -74,7 +75,7 @@ const About = ({ isDarkMode }) => {
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer  hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-gray-400 dark:hover:bg-darkHover/50"
+                className="border-[0.5px] border-gray-500 rounded-xl p-4 cursor-pointer  hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-gray-400 dark:hover:bg-darkHover/50"
               >
                 <Image
                   src={isDarkMode ? iconDark : icon}
@@ -101,15 +102,14 @@ const About = ({ isDarkMode }) => {
           </motion.h4>
 
           <motion.ul
-            initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 0.6 }}
-          
-          className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
+            className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5"
+          >
             {toolsData.map((tool, index) => (
               <motion.li
-
-                whileHover={{scale: 1.1}}              
+                whileHover={{ scale: 1.1 }}
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-gray-400 dark:hover:bg-darkHover/50"
                 key={index}
               >
