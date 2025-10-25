@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 
 const About = ({ isDarkMode }) => {
   return (
+    // This the about file
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
